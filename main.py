@@ -1,3 +1,8 @@
+#Vor dem Arbeiten: git pull (Um alles up to date zu haben)
+#Nach dem Arbeiten: git add .
+#                   git commit -m "Beschreibung der Änderungen"
+#                   git push (damit der Haupt-PC alle Änderungen bekommt)
+
 import pygame
 import sys
 
