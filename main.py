@@ -4,12 +4,10 @@
 #                   git push (damit der Haupt-PC alle Änderungen bekommt)
 
 import pygame
+from gameobject import GameObject
 import sys
 
 
-WIDTH = 900
-HEIGHT = 950
-TILE_SIZE = 30
 
 TILE_COLORS =  {
     0: (0, 0, 0),           # leer
@@ -23,6 +21,7 @@ TILE_COLORS =  {
     8: (0, 0, 255),         # Ecke unten rechts
     9: (255, 255, 255),     # Gate
 }
+
 
 boards = [
 [6, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5],
@@ -59,6 +58,12 @@ boards = [
 [3, 7, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 3],
 [7, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 8]  
 ]
+
+TILE_SIZE = 20
+WIDTH = len(boards[0]) * TILE_SIZE
+HEIGHT = len(boards) * TILE_SIZE
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
 
 def main():
     pygame.init()
